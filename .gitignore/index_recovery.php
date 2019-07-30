@@ -41,6 +41,7 @@
     </div>
 </header>
 
+
 <main role="main" class="container">
 
     <div class="row">
@@ -143,8 +144,8 @@
                     <li><a href="#">Facebook</a></li>
                 </ol>
             </div>
-        </aside><!-- /.blog-sidebar -->
-
+        </aside>/.blog-sidebar
+    
     </div><!-- /.row -->
 
 </main><!-- /.container -->

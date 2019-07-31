@@ -11,6 +11,8 @@
             FROM posts 
             WHERE id = '".$index."'" ;
 
+    
+        
     $stmt = $connection->prepare($sql);
 
     $stmt->execute();
@@ -18,6 +20,9 @@
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
     $results = $stmt->fetchAll();
+
+ 
+
 ?>
 
 <?php 
@@ -43,7 +48,8 @@
                 <?php    
                     }
                 ?>
-                            
+
+                <?php include 'comments.php'?>            
                 
             </div>
 

@@ -8,7 +8,7 @@
 
         <div class="col-sm-8 blog-main">
 
-            <?php include 'posts.php'?>
+            <?php include 'posts.php'?> <!--includes the main posts feed, shows all posts from the blog database-->
 
         </div><!-- /.blog-main -->
 

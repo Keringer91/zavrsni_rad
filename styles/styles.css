@@ -18,11 +18,6 @@ h4, h5, h6 {
     text-decoration: underline;  
 }
 
-hr {
-    border: 1px solid black;
-    
-}
-
 .comments {
     list-style: none;
     padding:0;
@@ -30,4 +25,8 @@ hr {
 
 .author {
     font-weight: bold;
+}
+
+.hidden {
+    display: none;
 }

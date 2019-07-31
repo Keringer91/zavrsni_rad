@@ -25,7 +25,7 @@
 ?>
 
 
-    <div>
+    <div class="comment-section">
             <ul class="comments">
                 <?php         
                     foreach($results as $r) {        
@@ -34,6 +34,7 @@
                         <hr class="new1">
                         <p class="author"><?php echo $r['author']; ?></p>        
                         <p><?php echo $r['text']; ?> </p>
+                        <!--Lists all comments for the corresponding post from the database-->
                     </li>        
                 <?php    
                     }

@@ -40,18 +40,25 @@
                 <?php         
                     foreach($results as $r) {        
                 ?>        
-
+                        <!--Shows a single post from the database - the fetched array contains only the post with the corresponding index from GET-->
                         <h2><?php echo $r['title']; ?></h2>        
                         <p class="blog-post-meta"><?php echo $r['created_at']; ?> </p>
                         <p><?php echo $r['body']; ?></p>
                             
                 <?php    
                     }
-                ?>
+                ?>                
 
-                <?php include 'comments.php'?>            
                 
             </div>
+            
+            
+
+            <div>    
+                 <button type="button" id="showHide" class="btn btn-default" value="hide" onclick="hideComments(this.value);">Hide comments</button>
+            </div> <!--This button calls a JS DOM function to change the visibility of the comment-section class-->
+
+        <?php include 'comments.php'?> 
 
         </div><!-- /.blog-main -->
 

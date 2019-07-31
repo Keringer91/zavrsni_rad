@@ -15,7 +15,8 @@
 
     <!-- Custom styles for this template -->
     <link href="styles/blog.css" rel="stylesheet">
-    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet"> <!--my custom stylesheet to override bootstrap's default-->
+    <script src="comments_button.js"></script> <!--includes the comment section show/hide button functionalities-->
     
 </head>
 

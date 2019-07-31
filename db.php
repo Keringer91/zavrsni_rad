@@ -1,5 +1,6 @@
 <?php
 
+//establishing connection with the blog database, proceeds error message on failure
 
     try {
         $connection = new PDO(

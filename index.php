@@ -1,5 +1,5 @@
 <?php 
-    include 'PHP/header.php'
+    include 'header.php'
 ?> <!--My header-->
 
 <main role="main" class="container">
@@ -8,12 +8,12 @@
 
         <div class="col-sm-8 blog-main">
 
-            <?php include 'PHP/posts.php'?>
+            <?php include 'posts.php'?>
 
         </div><!-- /.blog-main -->
 
         <?php
-             include 'PHP/aside.php'
+             include 'aside.php'
         ?> <!--My sidebar-->
     
     </div><!-- /.row -->
@@ -21,7 +21,7 @@
 </main><!-- /.container -->
 
 <?php 
-    include 'PHP/footer.php'
+    include 'footer.php'
 ?> <!--My footer-->
 
 

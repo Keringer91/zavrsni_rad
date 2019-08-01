@@ -1,5 +1,5 @@
 <?php
-
+    $index = null;
     if (isset($_GET['post_id'])) {
         $index=$_GET['post_id'];
     }

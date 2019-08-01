@@ -33,7 +33,9 @@
                     <li class="comment">
                         <hr class="new1">
                         <p class="author"><?php echo $r['author']; ?></p>        
-                        <p><?php echo $r['text']; ?> </p>
+                        <p><?php echo $r['text']; ?> 
+                            <a class="btn btn-default" href="/delete-comment.php?post_id=<?php echo $index; ?>&comment_id=<?php echo $r['id']; ?>">Delete this</a>
+                        </p>
                         <!--Lists all comments for the corresponding post from the database-->
                     </li>        
                 <?php    

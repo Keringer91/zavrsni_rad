@@ -1,5 +1,4 @@
 <?php
-    $index = 0;
 
     if (isset($_GET['post_id'])) {
         $index=$_GET['post_id'];
@@ -52,18 +51,21 @@
                 
             </div>
             
-            
+            <div class='add-comment'>
+            <!--Add new comment form-->
 
-            <div>    
-                 <button type="button" id="showHide" class="btn btn-default" value="hide" onclick="hideComments(this.value);">Hide comments</button>
-            </div> <!--This button calls a JS DOM function to change the visibility of the comment-section class-->
+                <?php include 'create-comment.php' ?>        
+
+            </div>
+
+            
 
         <?php include 'comments.php'?> 
 
         </div><!-- /.blog-main -->
 
         <?php
-             include 'aside.php'
+             include 'sidebar.php'
         ?> <!--My sidebar-->
     
     </div><!-- /.row -->

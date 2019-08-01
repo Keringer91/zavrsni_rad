@@ -13,7 +13,7 @@
         </div><!-- /.blog-main -->
 
         <?php
-             include 'aside.php'
+             include 'sidebar.php'
         ?> <!--My sidebar-->
     
     </div><!-- /.row -->

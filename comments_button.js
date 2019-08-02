@@ -19,8 +19,12 @@
 
     }
 
-    function confirmDelete(input){
-       console.log(input);
+    function confirmDelete(id){
+       var result = window.confirm('Do you really want to delete this post?');
+        if (result)
+        {
+            window.location.replace("/delete-post.php?post_id=" + id);
+            
+        }
     }
 
-   

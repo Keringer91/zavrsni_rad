@@ -45,9 +45,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
 
 
-    <form class='add-comment' action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+    <form class='add-comment' action="<?php echo $_SERVER['PHP_SELF']; ?>?post_id=<?php echo $index; ?>" method="POST">
         <h4>Comment this post</h4>
-        <div class='add-comment'> <input type="hidden" name="post_id" value="<?php echo $index; ?>"></div> <br> 
+        <div class='add-comment'> 
+            <input type="hidden" name="post_id" value="<?php echo $index; ?>">
+        </div> 
+        <br> 
 
         <div class='add-comment'>
 

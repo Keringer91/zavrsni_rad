@@ -36,8 +36,8 @@
             <div class="blog-post">
     
                 <?php include 'display-posts.php' ?> 
-                <a class="btn btn-default" href="/delete-post.php?post_id=<?php echo $index;?>">Delete this post</a>
-                <button class="btn btn-primary" onclick="confirmDelete(<?php echo $r['post.id'] ?>)">Delete this post</button>
+                
+                <button class="btn btn-primary" onclick="confirmDelete(<?php echo $index;?>)">Delete this post</button>
 
             </div>
             

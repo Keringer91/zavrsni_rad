@@ -40,3 +40,17 @@ a.latest {
 .add-comment {
     padding: 1px;
 }
+
+textarea {
+    padding: 10px;
+}
+
+.alert.alert-danger {
+    padding: 5px;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

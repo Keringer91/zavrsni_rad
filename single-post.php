@@ -5,12 +5,11 @@
     }
     
     require('db.php');
-
-    $sql = "SELECT posts.id as id, posts.title as title, posts.created_at as created_at, posts.body as body
-            FROM posts 
-            WHERE id = '".$index."'" ;
-
     
+    $sql = "SELECT posts.id as id, posts.title as title, posts.created_at as created_at, posts.body as body, users.first_name as fName, users.last_name as lName
+            FROM posts
+            INNER JOIN users ON posts.author=users.id 
+            WHERE posts.id = '".$index."'" ;
         
     $stmt = $connection->prepare($sql);
 
@@ -36,19 +35,10 @@
 
             <div class="blog-post">
     
-                <?php         
-                    foreach($results as $r) {        
-                ?>        
-                        <!--Shows a single post from the database - the fetched array contains only the post with the corresponding index from GET-->
-                        <h2><?php echo $r['title']; ?></h2>        
-                        <p class="blog-post-meta"><?php echo $r['created_at']; ?> </p>
-                        <p><?php echo $r['body']; ?></p>
-                            
-                <?php    
-                    }
-                ?>                
+                <?php include 'display-posts.php' ?> 
+                <a class="btn btn-default" href="/delete-post.php?post_id=<?php echo $index;?>">Delete this post</a>
+                <button class="btn btn-primary" onclick="confirmDelete(<?php echo $r['post.id'] ?>)">Delete this post</button>
 
-                
             </div>
             
             <div class='add-comment'>
@@ -57,8 +47,6 @@
                 <?php include 'create-comment.php' ?>        
 
             </div>
-
-            
 
         <?php include 'comments.php'?> 
 

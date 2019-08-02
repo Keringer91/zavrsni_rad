@@ -19,4 +19,8 @@
 
     }
 
+    function confirmDelete(input){
+       console.log(input);
+    }
+
    

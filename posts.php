@@ -21,18 +21,19 @@
 
 
 
-        <div class="blog-post">
+    <div class="blog-post">
 
-        <?php include 'display-posts.php' ?> 
+    <?php include 'display-posts.php' ?> 
 
-        <nav class="blog-pagination">
+    <nav class="blog-pagination">
 
-        <a class="btn btn-outline-primary" href="#">Older</a>
-        <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+        <!--pending feature-->
+        <!-- <a class="btn btn-outline-primary" href="/list_ads.php?page=<?php echo $page - 1; ?>">Older</a>
+        <a class="btn btn-outline-primary " href="/list_ads.php?page=<?php echo $page + 1; ?>">Newer</a> --> 
 
-        </nav>       
+    </nav>       
 
-        </div>
+    </div>
 
         
 

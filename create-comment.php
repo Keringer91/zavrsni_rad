@@ -54,12 +54,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class='add-comment'>
 
-            <input type="text" name="author" placeholder="Your name:">
+            <input width="100" type="text" name="author" placeholder="Your name:" >
 
             <?php
                 if($authorErr !== '') { 
             ?>
-                   <span class="alert alert-danger"> <?php echo $authorErr;?></span> 
+                   <br><span class="alert alert-danger"> <?php echo $authorErr;?></span>
             <?php
                 }
             ?> 
@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         </div> <br>
 
-        <div class='add-comment'><input class="btn btn-default" type="submit" value='Submit'></div><br>
-        
+        <div class="publish-button"'><input class="btn btn-default publish" type="submit" value='Submit comment'></div><br>
+
     </form>
     

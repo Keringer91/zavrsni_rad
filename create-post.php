@@ -8,8 +8,8 @@
 
         <div class="col-sm-8 blog-main">
 
-            <?php include 'post-form.php'?> <!--adds new post into the database-->
-
+            <?php include 'post-form.php'?><br> <!--adds new post into the database-->
+          
         </div><!-- /.blog-main -->
 
         <?php

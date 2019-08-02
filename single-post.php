@@ -6,6 +6,8 @@
     
     require('db.php');
     
+    //Accessing blog database and finding post with the given id - index
+
     $sql = "SELECT posts.id as id, posts.title as title, posts.created_at as created_at, posts.body as body, users.first_name as fName, users.last_name as lName
             FROM posts
             INNER JOIN users ON posts.author=users.id 
@@ -36,8 +38,8 @@
             <div class="blog-post">
     
                 <?php include 'display-posts.php' ?> 
-                
-                <button class="btn btn-primary" onclick="confirmDelete(<?php echo $index;?>)">Delete this post</button>
+                <!--This button will link to delete- post and deletes your post after confirmation-->
+                <div class="publish-button"><button class="btn btn-primary" onclick="confirmDelete(<?php echo $index;?>)">Delete this post</button></div><br>
 
             </div>
             

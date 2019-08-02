@@ -8,7 +8,7 @@
     $comment_id=$_GET['comment_id'];
     $post_id=$_GET['post_id'];
 
-   // echo $comment_id.$post_id;
+    //This code will delete the selected comment from the database
 
     $sql = "DELETE FROM comments WHERE comments.id ='".$comment_id."'  ";
 

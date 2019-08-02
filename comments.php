@@ -26,7 +26,7 @@
 <?php
     if(empty($results)) { 
 ?>
-        <p style="font-weight:bold;">Nobody commented on this post yet. Be first!</p>
+        <br><div class = "publish-button" ><p style="font-weight:bold;">Nobody commented on this post yet. Be first!</p> </div>
 <?php    
     }
 ?>

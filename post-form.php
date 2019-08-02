@@ -21,11 +21,16 @@ $sql = 'SELECT id, first_name, last_name FROM users';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       
     
-    $author = test_input($_POST["user_id"]);
     
+    
+    if (empty($_POST["user_id"])) {
+        $titleErr = "Please select user";
+      } else {
+        $author = test_input($_POST["user_id"]);
+      }
 
     if (empty($_POST["title"])) {
-        $titleErr = "Name is required";
+        $titleErr = "Title is required";
       } else {
         $title = test_input($_POST["title"]);
       }
@@ -38,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
       $created_at = date('Y-m-d h:i:s');
 
-   if($title !=='' && $body !== '' ) {
+   if($title !=='' && $body !== '' && $author !== '' ) {
 
         $sql = 'INSERT INTO posts (title, created_at, body, author) VALUES (?, ?, ?, ?)';
         $stmt = $connection->prepare($sql);
@@ -63,7 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php
             }
             ?>
-        </select>
+        </select> <br>
+        
 
         <div class='add-post'>
 
@@ -72,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php
                 if($titleErr !== '') {
             ?>
-                   <span class="alert alert-danger"> <?php echo $titleErr;?></span> 
+                   <span class="alert alert-danger"> <?php echo $titleErr;?></span>
             <?php
                 }
             ?>
@@ -86,14 +92,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
              <?php
                 if($bodyErr !== '') {
             ?>
-                   <span class="alert alert-danger"> <?php echo $bodyErr;?></span> 
+                   <span class="alert alert-danger"> <?php echo $bodyErr;?></span>
             <?php
                 }
             ?>
 
         </div> <br>
 
-        <div class='add-post btn btn-default'><input type="submit" value='Publish post'></div><br>
+        <div class="publish-button"><input class='btn btn-primary publish' type="submit" value='Publish post'></div><br>
 
     </form>
     

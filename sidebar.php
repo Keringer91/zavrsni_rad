@@ -20,17 +20,17 @@
 
 <aside class="col-sm-3 ml-sm-auto blog-sidebar">
             <div class="sidebar-module sidebar-module-inset">
-                <h4>Latest posts</h4>
+                <h4>Latest posts</h4><br>
                     <div class="latest">
                         <?php foreach($results as $r) {
                         ?>
                             <!--Lists all posts on the main page from the database-->
-                            <a class="blog-post-title" href="single-post.php?post_id=<?php echo $r['id']; ?>"><h5><?php echo $r['title']; ?></h5></a>
+                            <a class="blog-post-title" href="single-post.php?post_id=<?php echo $r['id']; ?>"><h5><?php echo $r['title']; ?><br><br></h5></a>
 
                         <?php    
                         }
                         ?>
-                    </div>
-
+                    </div>     
             </div>
+        <br>   
         </aside><!-- /.blog-sidebar -->

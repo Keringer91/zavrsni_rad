@@ -39,8 +39,10 @@
     
                 <?php include 'display-posts.php' ?> 
                 <!--This button will link to delete- post and deletes your post after confirmation-->
-                <div class="publish-button"><button class="btn btn-primary" onclick="confirmDelete(<?php echo $index;?>)">Delete this post</button></div><br>
-
+                <div class="publish-button">
+                    <button class="btn btn-primary" onclick="confirmDelete(<?php echo $index;?>)">Delete this post</button>
+                    <button class="btn btn-primary del-all" onclick="confirmDeleteAll()">Delete all posts</button>
+                </div>
             </div>
             
             <div class='add-comment'>

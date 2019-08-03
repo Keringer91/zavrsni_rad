@@ -37,9 +37,12 @@
     if(!empty($results)) { 
 ?>
 
-    <div class='add-comment'>    
-                 <button type="button" id="showHide" class="btn btn-default" value="hide" onclick="hideComments(this.value);">Hide comments</button>
-    </div> <!--This button calls a JS DOM function to change the visibility of the comment-section class-->
+    <div style="display:inline-blocks; text-align: center;" class='add-comment'>
+        <!--This button calls a JS DOM function to change the visibility of the comment-section class-->    
+        <button style="width:30%" type="button" id="showHide" class="btn btn-default" value="hide" onclick="hideComments(this.value);">Hide comments</button>
+        <!--This button calls a JS DOM function to delete all comments below the actual post-->
+        <button style="width:30%" class="btn btn-primary del-all" onclick="confirmDeleteAllComm(<?php echo $index;?>)">Delete all comments</button>
+    </div> 
        
 
     <div class="comment-section">
@@ -52,10 +55,13 @@
                     ?>        
                         <li>
                             <hr class="new1">
-                            <p class="author"><?php echo $r['author']; ?></p>        
-                            <p><?php echo $r['text']; ?> 
-                                <a class="delete-comment btn btn-default" href="/delete-comment.php?post_id=<?php echo $index; ?>&comment_id=<?php echo $r['id']; ?>">Delete this</a>
-                            </p>
+                            <p class="author"><?php echo $r['author']; ?></p>  
+                            <div style="display: inline-blocks; ">
+
+                                <p><?php echo $r['text']; ?></p> 
+                                <a class="delete-comment btn btn-default" href="/delete-comment.php?post_id=<?php echo $index; ?>&comment_id=<?php echo $r['id']; ?>">Delete this comment</a>
+
+                            </div>
                             <!--Lists all comments for the corresponding post from the database-->
                         </li>        
                     <?php    

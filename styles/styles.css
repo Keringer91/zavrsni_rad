@@ -119,6 +119,22 @@ textarea {
     text-align:center;
 }
 
+.btn-primary.del-all {
+    background-color:#d12e2e;
+    border-color:#fa4242;
+}
+.btn-primary.del-all:hover {
+    background-color: #fa4242;
+}
+
 input .comment-button {
     width: 30%;
+}
+
+.add-user {
+    width: 50%;
+}
+
+.user-form {
+    width: 50%;
 }

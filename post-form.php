@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class='add-post'>
 
-            <input type="text" name="title" placeholder="Title goes here...">
+            <input type="text" name="title" value="<?php if (isset($title)) echo $title; ?>" placeholder="Title goes here...">
 
             <?php
                 if($titleErr !== '') {
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class='add-post'>
 
-            <textarea rows="10" cols="50" class='comment-text' name="body" placeholder="Write Your post's content here..."></textarea> <br>
+            <textarea rows="10" cols="50" class='comment-text' name="body" placeholder="Write Your post's content here..."><?php if(isset($_POST['body'])) echo $_POST['body']; ?></textarea> <br>
 
              <?php
                 if($bodyErr !== '') {

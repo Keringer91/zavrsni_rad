@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class='add-comment'>
 
-            <input width="100" type="text" name="author" placeholder="Your name:" >
+            <input width="100" type="text" name="author" value="<?php if (isset($author)) echo $author; ?>" placeholder="Your name:" >
 
             <?php
                 if($authorErr !== '') { 
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class='add-comment'>
 
-            <textarea rows="6" cols="50" class='comment-text' name="text" placeholder="Write a comment here..."></textarea> <br>
+            <textarea rows="6" cols="50" class='comment-text' name="text" placeholder="Write a comment here..."><?php if(isset($_POST['text'])) echo $_POST['text']; ?></textarea> <br>
 
             <?php
                 if($textErr !== '') {
@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         </div> <br>
 
-        <div class="publish-button"'><input class="btn btn-default publish" type="submit" value='Submit comment'></div><br>
+        <div class="publish-button"><input class="btn btn-default publish" type="submit" value='Submit comment'></div><br><br>
 
     </form>
     

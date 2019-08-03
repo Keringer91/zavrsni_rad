@@ -16,7 +16,7 @@
     <!-- Custom styles for this template -->
     <link href="styles/blog.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet"> <!--my custom stylesheet to override bootstrap's default-->
-    <script src="comments_button.js"></script> <!--includes the comment section show/hide button functionalities-->
+    <script src="comments_button.js"></script> <!--includes all JS button functions-->
     
 </head>
 
@@ -28,6 +28,7 @@
             <nav class="nav">
                 <a class="nav-link" href="/index.php">Home</a>
                 <a class="nav-link" href="/create-post.php">Create a new post</a>
+                <a class="nav-link" href="/create-user.php">Create a new user</a>
             </nav>
         </div>
     </div>

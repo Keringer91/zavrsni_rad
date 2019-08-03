@@ -28,3 +28,21 @@
         }
     }
 
+    function confirmDeleteAll(){
+        var result = window.confirm('Do you really want to DELETE ALL POSTS from the blog?');
+         if (result)
+         {
+             window.location.replace("/delete-all-posts.php");
+             
+         }
+     }
+
+    function confirmDeleteAllComm(id){
+        var result = window.confirm('Do you really want to delete all comments below this post?');
+         if (result)
+         {
+             window.location.replace("/delete-all-comments.php?post_id=" + id);
+             
+         }
+    }
+
